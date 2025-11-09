@@ -5,12 +5,11 @@ import pandas as pd
 import csv as csv
 
 class plot():
-    print("hi")
-
-
+    def __init__():
+        print("hi")
 
 class distributions(plot):
-   def violin_plot():
+    def violin_plot():
         df = pd.read_csv('Input.csv')
         fig, axes = plt.subplots()
         axes.violinplot(dataset=[
@@ -28,4 +27,23 @@ class distributions(plot):
         axes.set_ylabel("Peak Player Count")
         axes.set_xticks([1, 2, 3, 4, 5, 6, 7])
         axes.set_xticklabels(['2019', '2020', '2021', '2022', '2023', '2024', '2025'])
-        plt.show() 
+        plt.show()
+    #
+    def box_plot():
+        df = pd.read_csv('Input.csv')
+        fig, axes = plt.subplots()
+        axes.boxplot(df.iloc[:, 2], orientation = 'horizontal')
+        axes.set_title("Average Peak Player Count")
+        axes.set_xlabel("Peak Player Count")
+        plt.show()
+    #
+    def scatter_plot():
+        df = pd.read_csv('Input.csv')
+        trendline = np.poly1d(np.polyfit(df.iloc[:,2], df.iloc[:,0], deg=1))
+        fig, axes = plt.subplots()
+        axes.scatter(df.iloc[:,2],df.iloc[:,0])
+        axes.plot(df.iloc[:,2], trendline(df.iloc[:,2]), color="green", label="Trend Line")
+        axes.grid(True)
+        plt.show()
+
+
