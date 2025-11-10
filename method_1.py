@@ -33,14 +33,12 @@ class DataVisualizer:
         os.makedirs(save_dir, exist_ok=True)#create directory if not exists
         
         plt.figure(figsize=(20, 6))
-        plt.bar(self.data['MonthYear'], self.data["Peak"], color='skyblue')
+        plt.hist(self.data['Peak'], bins=10, color='skyblue')
         
         #Graph formatting
-        plt.xticks(rotation=90)
-        plt.ylabel('Peak Player Count')
-        plt.xlabel("Month-Year")  
-        plt.title("Peak Player Count by Month-Year")
-        plt.ylim(0, max(self.data["Peak"]) * 1.1)
+        plt.ylabel('Frequency')
+        plt.xlabel("Peak Player Count")  
+        plt.title("Frequency of Player Count")
         plt.grid(True, axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         
