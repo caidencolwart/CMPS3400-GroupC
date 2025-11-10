@@ -11,6 +11,7 @@ def main():
   
   # Generate and save histogram
   parent.plot_histogram()
+  parent.plot_line_graph()
   
   #advanced visualizations
   child.plot_distributions()
