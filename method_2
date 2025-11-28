@@ -1,0 +1,37 @@
+import pickle
+import os
+import matplotlib as plt
+import pandas as pd
+import csv as csv
+import scipy
+from method_1 import DataVisualizer
+
+#--------------Parent Class 2-----------------------------
+#store data into data frame
+#convert data frame to pickle file
+#export pickle file and set up any output files directory
+#put another objective here
+
+global loaded_df
+
+class placeholderName:
+    def __init__(self, filepath):
+        DataVisualizer(self.filepath)
+        df = pd.read_csv(data)
+        df.to_pickle('data.pkl')
+        loaded_df = pd.read_pickle('data.pkl')
+        
+#--------------Child Class 2-----------------------------
+#Read the pickle file
+#Probability
+#Vectors
+#Categorial Attribute Display
+
+class dataCalculations(placeholderName):
+    def calcProbabilities():
+        x
+    def calcVectors():
+        x
+    def catDisplay():
+        x
+
