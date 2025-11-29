@@ -19,10 +19,8 @@ def main():
   #method 2 methods lol
   an = DataAnalyzer("data.pkl")
 
-  # Multiple statistics using *args
   print(an.statistics("Peak", "Gain"))
 
-  # Multiple vectors with *args
   v1 = an.vector("Peak")
   v2 = an.vector("Gain")
   print(an.dot_product(v1, v2))

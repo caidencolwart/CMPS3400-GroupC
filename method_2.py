@@ -98,7 +98,6 @@ class DataAnalyzer(DataProcessorBase):
         if month_column not in self.data.columns or peak_column not in self.data.columns:
             raise ValueError("Specified columns not found in data.")
 
-        # Default bins: 0, 50k, 100k, ... up to max(Peak)
         if bins is None:
             max_val = self.data[peak_column].max()
             bins = list(range(0, int(max_val + 50000), 50000))
@@ -107,7 +106,6 @@ class DataAnalyzer(DataProcessorBase):
         combined = self.data[[month_column]].copy()
         combined["PeakBin"] = peak_binned
 
-        # Create Month × PeakBin pairs
         combined_pairs = combined.apply(lambda row: (row[month_column], row["PeakBin"]), axis=1)
         uniq = combined_pairs.unique()
         perms = list(permutations(uniq, r))
