@@ -3,7 +3,7 @@ import os
 import matplotlib as plt
 import pandas as pd
 import csv as csv
-import scipy
+import numpy as np
 from method_1 import DataVisualizer
 
 #--------------Parent Class 2-----------------------------
@@ -12,14 +12,13 @@ from method_1 import DataVisualizer
 #export pickle file and set up any output files directory
 #put another objective here
 
-global loaded_df
-
 class placeholderName:
     def __init__(self, filepath):
-        DataVisualizer(self.filepath)
-        df = pd.read_csv(data)
+        self.filepath = filepath
+        data = DataVisualizer(filepath)
+        df = pd.read_csv(data.filepath)
         df.to_pickle('data.pkl')
-        loaded_df = pd.read_pickle('data.pkl')
+        
         
 #--------------Child Class 2-----------------------------
 #Read the pickle file
@@ -28,8 +27,13 @@ class placeholderName:
 #Categorial Attribute Display
 
 class dataCalculations(placeholderName):
+    def __init__(self, __pklpath):
+        self.__pklpath = __pklpath
+        loaded_pkl = pickle.load(open(__pklpath, 'rb'))
+
+
     def calcProbabilities():
-        x
+       x
     def calcVectors():
         x
     def catDisplay():
