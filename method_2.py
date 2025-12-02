@@ -28,11 +28,7 @@ class DataProcessorBase:
             f.write(str(content))
         return path
 
-    def _save_plot(self, filename):
-        path = os.path.join(self.plot_dir, filename)
-        plt.savefig(path)
-        plt.close()
-        return path
+    
 
 class DataAnalyzer(DataProcessorBase):
 
