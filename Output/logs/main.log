@@ -1,0 +1,233 @@
+2025-12-02 11:21:40,010 - INFO - Starting Data Analysis...
+2025-12-02 11:21:40,664 - INFO - Data Analysis Completed.
+2025-12-02 11:21:40,665 - INFO - ===Project Ended===
+
+2025-12-02 11:21:40,665 - INFO - ====Project Started====
+2025-12-02 11:21:40,666 - INFO - Starting Data Visualization...
+2025-12-02 11:21:41,552 - ERROR - Error in Data Visualization: 'DataVisualizer' object has no attribute 'df'
+2025-12-02 11:25:56,331 - INFO - Starting Data Analysis...
+2025-12-02 11:25:56,809 - INFO - Data Analysis Completed.
+2025-12-02 11:25:56,809 - INFO - ===Project Ended===
+
+2025-12-02 11:25:56,810 - INFO - ====Project Started====
+2025-12-02 11:25:56,811 - INFO - Starting Data Visualization...
+2025-12-02 11:25:57,156 - ERROR - Error in Data Visualization: 'DataVisualizer' object has no attribute 'df'
+2025-12-02 11:32:18,529 - INFO - Starting Data Analysis...
+2025-12-02 11:32:19,125 - INFO - Data Analysis Completed.
+2025-12-02 11:32:19,126 - INFO - ===Project Ended===
+
+2025-12-02 11:32:19,126 - INFO - ====Project Started====
+2025-12-02 11:32:19,127 - INFO - Starting Data Visualization...
+2025-12-02 11:32:19,465 - ERROR - Error in Data Visualization: 'DataVisualizer' object has no attribute 'config'
+2025-12-02 11:36:31,982 - INFO - Starting Data Analysis...
+2025-12-02 11:36:32,572 - INFO - Data Analysis Completed.
+2025-12-02 11:36:32,573 - INFO - ===Project Ended===
+
+2025-12-02 11:36:32,573 - INFO - ====Project Started====
+2025-12-02 11:36:32,574 - INFO - Starting Data Visualization...
+2025-12-02 11:36:32,906 - ERROR - Error in Data Visualization: 'hist_bins'
+2025-12-02 11:37:08,914 - INFO - Starting Data Analysis...
+2025-12-02 11:37:09,417 - INFO - Data Analysis Completed.
+2025-12-02 11:37:09,417 - INFO - ===Project Ended===
+
+2025-12-02 11:37:09,418 - INFO - ====Project Started====
+2025-12-02 11:37:09,419 - INFO - Starting Data Visualization...
+2025-12-02 11:37:09,788 - ERROR - Error in Data Visualization: 'hist_bins'
+2025-12-02 11:38:12,970 - INFO - Starting Data Analysis...
+2025-12-02 11:38:13,495 - INFO - Data Analysis Completed.
+2025-12-02 11:38:13,496 - INFO - ===Project Ended===
+
+2025-12-02 11:38:13,496 - INFO - ====Project Started====
+2025-12-02 11:38:13,496 - INFO - Starting Data Visualization...
+2025-12-02 11:38:14,295 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-02 11:38:14,301 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-02 11:38:14,734 - ERROR - Error in Data Visualization: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-02 11:40:10,917 - INFO - Starting Data Analysis...
+2025-12-02 11:40:11,401 - INFO - Data Analysis Completed.
+2025-12-02 11:40:11,401 - INFO - ===Project Ended===
+
+2025-12-02 11:40:11,402 - INFO - ====Project Started====
+2025-12-02 11:40:11,402 - INFO - Starting Data Visualization...
+2025-12-02 11:40:11,736 - ERROR - Error in Data Visualization: object of type 'method' has no len()
+2025-12-02 11:42:18,546 - INFO - Starting Data Analysis...
+2025-12-02 11:42:18,721 - INFO - Data Analysis Completed.
+2025-12-02 11:42:18,721 - INFO - ===Project Ended===
+
+2025-12-02 11:42:18,722 - INFO - ====Project Started====
+2025-12-02 11:42:18,722 - INFO - Starting Data Visualization...
+2025-12-02 11:42:18,885 - ERROR - Error in Data Visualization: object of type 'method' has no len()
+2025-12-02 11:43:45,460 - INFO - Starting Data Analysis...
+2025-12-02 11:43:45,622 - INFO - Data Analysis Completed.
+2025-12-02 11:43:45,622 - INFO - ===Project Ended===
+
+2025-12-02 11:43:45,623 - INFO - ====Project Started====
+2025-12-02 11:43:45,623 - INFO - Starting Data Visualization...
+2025-12-02 11:43:45,998 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-02 11:43:46,001 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-02 11:43:46,175 - ERROR - Error in Data Visualization: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-02 11:51:02,117 - INFO - Starting Data Analysis...
+2025-12-02 11:51:02,274 - INFO - Data Analysis Completed.
+2025-12-02 11:51:02,274 - INFO - ===Project Ended===
+
+2025-12-02 11:51:02,274 - INFO - ====Project Started====
+2025-12-02 11:51:02,274 - INFO - Starting Data Visualization...
+2025-12-02 11:51:02,546 - ERROR - Error in Data Visualization: Column 'MonthYear' does not exist in the data.
+2025-12-02 11:52:25,767 - INFO - Starting Data Analysis...
+2025-12-02 11:52:25,997 - INFO - Data Analysis Completed.
+2025-12-02 11:52:25,997 - INFO - ===Project Ended===
+
+2025-12-02 11:52:25,997 - INFO - ====Project Started====
+2025-12-02 11:52:25,998 - INFO - Starting Data Visualization...
+2025-12-02 11:52:26,248 - ERROR - Error in Data Visualization: Column 'MonthYear' does not exist in the data.
+2025-12-02 11:52:53,784 - INFO - Starting Data Analysis...
+2025-12-02 11:52:53,998 - INFO - Data Analysis Completed.
+2025-12-02 11:52:53,998 - INFO - ===Project Ended===
+
+2025-12-02 11:52:53,998 - INFO - ====Project Started====
+2025-12-02 11:52:53,999 - INFO - Starting Data Visualization...
+2025-12-02 11:52:54,255 - ERROR - Error in Data Visualization: Column 'MonthYear' does not exist in the data.
+2025-12-02 11:54:07,182 - INFO - Starting Data Analysis...
+2025-12-02 11:54:07,340 - INFO - Data Analysis Completed.
+2025-12-02 11:54:07,341 - INFO - ===Project Ended===
+
+2025-12-02 11:54:07,342 - INFO - ====Project Started====
+2025-12-02 11:54:07,342 - INFO - Starting Data Visualization...
+2025-12-02 11:54:07,603 - ERROR - Error in Data Visualization: name 'x_column' is not defined
+2025-12-02 11:54:20,566 - INFO - Starting Data Analysis...
+2025-12-02 11:54:20,733 - INFO - Data Analysis Completed.
+2025-12-02 11:54:20,734 - INFO - ===Project Ended===
+
+2025-12-02 11:54:20,734 - INFO - ====Project Started====
+2025-12-02 11:54:20,734 - INFO - Starting Data Visualization...
+2025-12-02 11:54:20,981 - ERROR - Error in Data Visualization: name 'x_column' is not defined
+2025-12-02 11:54:31,166 - INFO - Starting Data Analysis...
+2025-12-02 11:54:31,320 - INFO - Data Analysis Completed.
+2025-12-02 11:54:31,320 - INFO - ===Project Ended===
+
+2025-12-02 11:54:31,320 - INFO - ====Project Started====
+2025-12-02 11:54:31,321 - INFO - Starting Data Visualization...
+2025-12-02 11:54:31,744 - ERROR - Error in Data Visualization: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2025-12-03 12:31:42,575 - INFO - Starting Data Analysis...
+2025-12-03 12:31:42,776 - INFO - Data Analysis Completed.
+2025-12-03 12:31:42,776 - INFO - ===Project Ended===
+
+2025-12-03 12:31:42,776 - INFO - ====Project Started====
+2025-12-03 12:31:42,776 - INFO - Starting Data Visualization...
+2025-12-03 12:31:43,843 - ERROR - Error in Data Visualization: 'AdvancedDataVisualizer' object has no attribute 'query_data'
+2025-12-03 12:40:27,286 - INFO - Starting Data Analysis...
+2025-12-03 12:40:27,527 - INFO - Data Analysis Completed.
+2025-12-03 12:40:27,527 - INFO - ===Project Ended===
+
+2025-12-03 12:40:27,527 - INFO - ====Project Started====
+2025-12-03 12:40:27,527 - INFO - Starting Data Visualization...
+2025-12-03 12:40:28,463 - INFO - Data Visualization Completed.
+2025-12-03 12:44:04,883 - INFO - ===Project Ended===
+
+2025-12-03 12:44:04,883 - INFO - ====Project Started====
+2025-12-03 12:44:04,883 - INFO - Starting Data Visualization...
+2025-12-03 12:44:05,828 - INFO - Data Visualization Completed.
+2025-12-03 12:44:05,828 - INFO - Starting Data Analysis...
+2025-12-03 12:44:06,035 - INFO - Data Analysis Completed.
+2025-12-03 12:45:35,200 - INFO - ===Project Ended===
+
+2025-12-03 12:45:35,200 - INFO - ====Project Started====
+2025-12-03 12:45:35,201 - INFO - Starting Data Visualization...
+2025-12-03 12:45:36,192 - INFO - Data Visualization Completed.
+2025-12-03 12:45:36,192 - INFO - Starting Data Analysis...
+2025-12-03 12:45:36,426 - INFO - Data Analysis Completed.
+2025-12-03 12:45:54,042 - INFO - ===Project Ended===
+
+2025-12-03 12:45:54,043 - INFO - ====Project Started====
+2025-12-03 12:45:54,043 - INFO - Starting Data Visualization...
+2025-12-03 12:45:55,010 - INFO - Data Visualization Completed.
+2025-12-03 12:45:55,010 - INFO - Starting Data Analysis...
+2025-12-03 12:45:55,185 - INFO - Data Analysis Completed.
+2025-12-03 12:52:07,935 - INFO - ===Project Ended===
+
+2025-12-03 12:52:07,935 - INFO - ====Project Started====
+2025-12-03 12:52:07,936 - INFO - Starting Data Visualization...
+2025-12-03 12:52:08,961 - INFO - Data Visualization Completed.
+2025-12-03 12:52:08,961 - INFO - Starting Data Analysis...
+2025-12-03 12:52:09,128 - INFO - Data Analysis Completed.
+2025-12-03 12:53:07,839 - INFO - ===Project Ended===
+
+2025-12-03 12:53:07,840 - INFO - ====Project Started====
+2025-12-03 12:53:07,840 - INFO - Starting Data Visualization...
+2025-12-03 12:53:07,889 - ERROR - Error in Data Visualization: ('Date', 'Peak')
+2025-12-03 12:53:07,890 - INFO - Starting Data Analysis...
+2025-12-03 12:53:08,089 - INFO - Data Analysis Completed.
+2025-12-03 12:53:20,828 - INFO - ===Project Ended===
+
+2025-12-03 12:53:20,829 - INFO - ====Project Started====
+2025-12-03 12:53:20,829 - INFO - Starting Data Visualization...
+2025-12-03 12:53:20,839 - ERROR - Error in Data Visualization: ('Date', 'Peak')
+2025-12-03 12:53:20,839 - INFO - Starting Data Analysis...
+2025-12-03 12:53:21,025 - INFO - Data Analysis Completed.
+2025-12-03 12:53:27,293 - INFO - ===Project Ended===
+
+2025-12-03 12:53:27,293 - INFO - ====Project Started====
+2025-12-03 12:53:27,294 - INFO - Starting Data Visualization...
+2025-12-03 12:53:27,304 - ERROR - Error in Data Visualization: ('Date', 'Peak')
+2025-12-03 12:53:27,304 - INFO - Starting Data Analysis...
+2025-12-03 12:53:27,478 - INFO - Data Analysis Completed.
+2025-12-03 12:55:16,281 - INFO - ===Project Ended===
+
+2025-12-03 12:55:16,282 - INFO - ====Project Started====
+2025-12-03 12:55:16,282 - INFO - Starting Data Visualization...
+2025-12-03 12:55:17,193 - INFO - Data Visualization Completed.
+2025-12-03 12:55:17,193 - INFO - Starting Data Analysis...
+2025-12-03 12:55:17,359 - INFO - Data Analysis Completed.
+2025-12-03 12:58:17,164 - INFO - ===Project Ended===
+
+2025-12-03 12:58:17,165 - INFO - ====Project Started====
+2025-12-03 12:58:17,165 - INFO - Starting Data Visualization...
+2025-12-03 12:58:17,509 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 12:58:17,512 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 12:58:18,244 - INFO - Data Visualization Completed.
+2025-12-03 12:58:18,244 - INFO - Starting Data Analysis...
+2025-12-03 12:58:18,417 - INFO - Data Analysis Completed.
+2025-12-03 13:02:55,949 - INFO - ===Project Ended===
+
+2025-12-03 13:02:55,950 - INFO - ====Project Started====
+2025-12-03 13:02:55,950 - INFO - Starting Data Visualization...
+2025-12-03 13:02:56,337 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:02:56,340 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:02:56,931 - ERROR - Error in Data Visualization: AdvancedDataVisualizer.plot_scatter() got an unexpected keyword argument 'x'
+2025-12-03 13:02:56,931 - INFO - Starting Data Analysis...
+2025-12-03 13:02:57,112 - INFO - Data Analysis Completed.
+2025-12-03 13:03:15,898 - INFO - ===Project Ended===
+
+2025-12-03 13:03:15,898 - INFO - ====Project Started====
+2025-12-03 13:03:15,898 - INFO - Starting Data Visualization...
+2025-12-03 13:03:16,265 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:03:16,268 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:03:16,855 - ERROR - Error in Data Visualization: AdvancedDataVisualizer.plot_scatter() got an unexpected keyword argument 'x'
+2025-12-03 13:03:16,856 - INFO - Starting Data Analysis...
+2025-12-03 13:03:17,026 - INFO - Data Analysis Completed.
+2025-12-03 13:06:25,195 - INFO - ===Project Ended===
+
+2025-12-03 13:06:25,196 - INFO - ====Project Started====
+2025-12-03 13:06:25,196 - INFO - Starting Data Visualization...
+2025-12-03 13:06:25,565 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:06:25,568 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:06:26,200 - ERROR - Error in Data Visualization: AdvancedDataVisualizer.plot_scatter() got an unexpected keyword argument 'x'
+2025-12-03 13:06:26,200 - INFO - Starting Data Analysis...
+2025-12-03 13:06:26,356 - INFO - Data Analysis Completed.
+2025-12-03 13:06:49,775 - INFO - ===Project Ended===
+
+2025-12-03 13:06:49,775 - INFO - ====Project Started====
+2025-12-03 13:06:49,775 - INFO - Starting Data Visualization...
+2025-12-03 13:06:50,165 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:06:50,168 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:06:50,916 - INFO - Data Visualization Completed.
+2025-12-03 13:06:50,916 - INFO - Starting Data Analysis...
+2025-12-03 13:06:51,063 - INFO - Data Analysis Completed.
+2025-12-03 13:22:59,072 - INFO - ====Project Started====
+2025-12-03 13:22:59,072 - INFO - Starting Data Visualization...
+2025-12-03 13:22:59,458 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:22:59,461 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 13:23:00,210 - INFO - Data Visualization Completed.
+2025-12-03 13:23:00,210 - INFO - Starting Data Analysis...
+2025-12-03 13:23:00,398 - INFO - Data Analysis Completed.
+2025-12-03 13:23:00,398 - INFO - ===Project Ended===
+
