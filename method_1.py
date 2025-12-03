@@ -2,12 +2,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+from autolog import auto_log, log_activity
+
 
 #--------------Parent Class 1-----------------------------
 #store configuration constatnts in dictionary
 #use histogram to visualize data
 #query data for searching
 class DataVisualizer:
+
+    @auto_log
     def __init__(self, filepath):
         self.filepath = filepath
         self.data = pd.read_csv(filepath)
@@ -28,7 +32,8 @@ class DataVisualizer:
         self.data.sort_values(["Year", "Month_num"], inplace=True)
         self.data.reset_index(drop=True, inplace=True)
 
-    #Histogram plot     
+    #Histogram plot
+    @auto_log     
     def plot_histogram(self, save_dir="Output/plots"):
         os.makedirs(save_dir, exist_ok=True)#create directory if not exists
         
@@ -47,7 +52,8 @@ class DataVisualizer:
         plt.savefig(out_path)
         plt.close()
         print(f'Histogram saved to {out_path}')
-
+    
+    @auto_log
     def plot_line_graph(self, save_dir="Output/plots"):
         os.makedirs(save_dir, exist_ok=True)#create directory if not exists
         plt.figure(figsize=(100,20))
@@ -61,6 +67,7 @@ class DataVisualizer:
         plt.close()
         print(f'Line Plot saved to {out_path}')
 
+    @auto_log
     def query_data(self, column, value):
         if column not in self.data.columns:
             raise ValueError(f"Column '{column}' does not exist in the data.")
@@ -70,13 +77,16 @@ class DataVisualizer:
 #read data from Input.csv
 #visualize the data using violin plot, whisker-plot, and box plot
 class AdvancedDataVisualizer(DataVisualizer):
+
+    @auto_log
     def __init__(self, filepath, base_visualizer: DataVisualizer = None):
         if base_visualizer:
             self.filepath = base_visualizer.filepath
             self.data = base_visualizer.data
         else:
             super().__init__(filepath)
-            
+
+    @auto_log
     def plot_distributions(self, save_dir="Output/plots"):
         os.makedirs(save_dir, exist_ok=True)
 
@@ -127,7 +137,8 @@ class AdvancedDataVisualizer(DataVisualizer):
         plt.close()
         print(f'Box plot saved to {save_dir}/box_plot.png')
         
-    #This method allows querying with multiple conditions, Boolean Indexing    
+    #This method allows querying with multiple conditions, Boolean Indexing  
+    @auto_log  
     def query_advanced(self, condition: dict):
         mask = pd.Series([True] * len(self.data))
         for column, value in condition.items(): 

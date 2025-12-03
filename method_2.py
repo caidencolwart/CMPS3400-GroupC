@@ -4,10 +4,13 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from itertools import permutations, combinations
+from autolog import auto_log, log_activity
+
 
 class DataProcessorBase:
 
-    def __init__(self, pickle_path="data.pkl", **kwargs):
+    @auto_log
+    def __init__(self, pickle_path="data.pkl", log_filename="output.txt", **kwargs):
         self.__pickle_path = pickle_path
         self.__settings = kwargs
 
@@ -18,70 +21,102 @@ class DataProcessorBase:
         os.makedirs(self.export_dir, exist_ok=True)
         os.makedirs(self.plot_dir, exist_ok=True)
 
+        # Output file setup (renamed from log to output)
+        self.log_file = os.path.join(self.export_dir, log_filename)
+        if not os.path.exists(self.log_file):
+            with open(self.log_file, "w") as f:
+                f.write("=== Output Log ===\n")
+
+    @auto_log
+    def _log(self, text):
+        """Append text to output.txt and optionally print to console."""
+        with open(self.log_file, "a") as f:
+            f.write(text + "\n")
+        
+
+    @auto_log
     def _load_pickle(self, path):
         with open(path, "rb") as f:
             return pickle.load(f)
 
+    @auto_log
     def _export_text(self, filename, content):
         path = os.path.join(self.export_dir, filename)
         with open(path, "w") as f:
             f.write(str(content))
         return path
 
-    
 
 class DataAnalyzer(DataProcessorBase):
 
+    @auto_log
     def __init__(self, pickle_path="data.pkl", *args, **kwargs):
         super().__init__(pickle_path, **kwargs)
         self.__internal_flag = True
 
+    @auto_log
     def _col(self, column):
         if column not in self.data.columns:
             raise ValueError(f"Column '{column}' not found.")
         return self.data[column]
 
+    @auto_log
     def statistics(self, *columns):
         results = {}
+
+        header = "\n" + "="*60 + "\n" + "SUMMARY STATISTICS".center(60) + "\n" + "="*60
+        self._log(header)
+
         for col in columns:
             c = self._col(col)
-            results[col] = {
+            stats = {
                 "mean": c.mean(),
                 "median": c.median(),
                 "std": c.std()
             }
+            results[col] = stats
 
-        print("\n" + "="*60)
-        print("SUMMARY STATISTICS".center(60))
-        print("="*60)
-        for col, stats in results.items():
-            print(f"\nColumn: {col}")
-            print(f"{'Mean':<10} | {'Median':<10} | {'Std Dev':<10}")
-            print(f"{stats['mean']:<10.2f} | {stats['median']:<10.2f} | {stats['std']:<10.2f}")
-        print("="*60 + "\n")
+            block = (
+                f"\nColumn: {col}\n"
+                f"{'Mean':<10} | {'Median':<10} | {'Std Dev':<10}\n"
+                f"{stats['mean']:<10.2f} | {stats['median']:<10.2f} | {stats['std']:<10.2f}"
+            )
+            self._log(block)
+
+        self._log("="*60 + "\n")
         return results
 
+    @auto_log
     def joint_counts(self, col1, col2):
         table = pd.crosstab(self._col(col1), self._col(col2))
-        print("\n" + "="*80)
-        print(f"JOINT COUNTS: {col1} x {col2}".center(80))
-        print("="*80)
-        print(table.to_string())
-        print("="*80 + "\n")
-        return table
 
+        header = (
+            "\n" + "="*80 + "\n" +
+            f"JOINT COUNTS: {col1} x {col2}".center(80) +
+            "\n" + "="*80
+        )
+        self._log(header)
+        self._log(table.to_string())
+        self._log("="*80 + "\n")
+
+        return table
+    
+    @auto_log
     def vector(self, column):
         vec = self._col(column).to_numpy()
-        print(f"\nVector for column '{column}':\n{vec}\n")
+        self._log(f"\nVector for column '{column}':\n{vec}\n")
         return vec
-
+    
+    @auto_log
     def dot_product(self, *vectors):
         result = vectors[0]
         for v in vectors[1:]:
             result = np.dot(result, v)
-        print(f"\nDot product result:\n{result}\n")
-        return result
 
+        self._log(f"\nDot product result:\n{result}\n")
+        return result
+    
+    @auto_log
     def bin_numeric_column(self, column, bins, labels=None):
         if column not in self.data.columns:
             raise ValueError(f"Column '{column}' not found in data.")
@@ -90,6 +125,7 @@ class DataAnalyzer(DataProcessorBase):
             labels = [f"{int(bins[i])}-{int(bins[i+1]-1)}" for i in range(len(bins)-1)]
         return pd.cut(numeric_col, bins=bins, labels=labels, include_lowest=True)
 
+    @auto_log
     def display_month_peak_info(self, peak_column="Peak", month_column="Month", bins=None, r=2):
         if month_column not in self.data.columns or peak_column not in self.data.columns:
             raise ValueError("Specified columns not found in data.")
@@ -107,28 +143,32 @@ class DataAnalyzer(DataProcessorBase):
         perms = list(permutations(uniq, r))
         combs = list(combinations(uniq, r))
 
-        print("\n" + "=" * 80)
-        print(f" MONTH × PEAK BIN REPORT".center(80))
-        print("=" * 80)
-        print(f" Number of Unique Month-Peak pairs : {len(uniq)}")
-        print(f" r-value (order)                   : {r}")
-        print("-" * 80)
+        header = (
+            "\n" + "=" * 80 + "\n" +
+            " MONTH × PEAK BIN REPORT ".center(80) +
+            "\n" + "=" * 80
+        )
+        self._log(header)
 
-        print("\nUNIQUE MONTH × PEAK BIN PAIRS:")
+        self._log(f" Number of Unique Month-Peak pairs : {len(uniq)}")
+        self._log(f" r-value (order)                   : {r}")
+        self._log("-" * 80)
+
+        self._log("\nUNIQUE MONTH × PEAK BIN PAIRS:")
         for i, val in enumerate(uniq, start=1):
-            print(f" {i:>3}. {val}")
+            self._log(f" {i:>3}. {val}")
 
-        print("\nPERMUTATIONS (ordered pairs):")
-        print(f" Total permutations: {len(perms)}")
+        self._log("\nPERMUTATIONS (ordered pairs):")
+        self._log(f" Total permutations: {len(perms)}")
         for i, p in enumerate(perms, start=1):
-            print(f" {i:>3}. {p}")
+            self._log(f" {i:>3}. {p}")
 
-        print("\nCOMBINATIONS (unordered pairs):")
-        print(f" Total combinations: {len(combs)}")
+        self._log("\nCOMBINATIONS (unordered pairs):")
+        self._log(f" Total combinations: {len(combs)}")
         for i, c in enumerate(combs, start=1):
-            print(f" {i:>3}. {c}")
+            self._log(f" {i:>3}. {c}")
 
-        print("=" * 80 + "\n")
+        self._log("=" * 80 + "\n")
 
         return {
             "unique_pairs": uniq,
