@@ -23,19 +23,18 @@ import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.dates as mdates
-
+from Lib.config import PLOT_DIR
 
 
 #%% CONSTANTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CONFIG = {
-    "PLOT_DIR": "Output/plots/",
     "HIST_BINS": 10,
     "LINE_FIGSIZE": (20,10),
     "VIOLIN_FIGSIZE": (10,5),
     "SCATTER_FIGSIZE": (8, 5),
 }
 #%% CONFIGURATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-os.makedirs(CONFIG["PLOT_DIR"], exist_ok=True)
+os.makedirs(PLOT_DIR, exist_ok=True)
 
 #%% DECLERATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Class defs start here
@@ -110,7 +109,7 @@ class DataVisualizer:
         plt.ylabel('Frequency')
         plt.grid(True, axis='y', alpha=0.75)
         
-        out = os.path.join(CONFIG["PLOT_DIR"], f"histogram_{column}.png")
+        out = os.path.join(PLOT_DIR, f"histogram_{column}.png")
         plt.savefig(out)
         plt.close()
         print(f"Histogram saved to {out}")
@@ -135,7 +134,7 @@ class DataVisualizer:
         plt.xticks(rotation=90, fontsize=6)
         plt.tight_layout()
         
-        out = os.path.join(CONFIG["PLOT_DIR"], f"line_{y_column}.png")
+        out = os.path.join(PLOT_DIR, f"line_{y_column}.png")
         plt.savefig(out) 
         plt.close()
         print(f"Line graph saved to {out}")
@@ -168,7 +167,7 @@ class AdvancedDataVisualizer(DataVisualizer):
         plt.title(f"Violin Plot of {column} by Year")
         plt.grid(True, linestyle="--", alpha=0.7)
 
-        out = os.path.join(CONFIG["PLOT_DIR"], f"violin_{column}.png")
+        out = os.path.join(PLOT_DIR, f"violin_{column}.png")
         plt.savefig(out)
         plt.close()
         print(f"Violin plot saved to {out}")
@@ -182,7 +181,7 @@ class AdvancedDataVisualizer(DataVisualizer):
         plt.title(f"Box Plot of {column}")
         plt.grid(True, axis="x", linestyle="--", alpha=0.7)
 
-        out = os.path.join(CONFIG["PLOT_DIR"], f"box_{column}.png")
+        out = os.path.join(PLOT_DIR, f"box_{column}.png")
         plt.savefig(out)
         plt.close()
         print(f"Box plot saved to {out}")     
@@ -217,7 +216,7 @@ class AdvancedDataVisualizer(DataVisualizer):
         plt.ylabel(y)
         plt.legend()
         
-        out = os.path.join(CONFIG["PLOT_DIR"], f"scatter_{y}_vs_Date.png")
+        out = os.path.join(PLOT_DIR, f"scatter_{y}_vs_Date.png")
         plt.savefig(out)
         plt.close()
         print(f"Scatter plot saved to {out}")

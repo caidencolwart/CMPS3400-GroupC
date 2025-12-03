@@ -1,0 +1,45 @@
+2025-12-03 16:07:42,546 - INFO - ====Project Started====
+2025-12-03 16:07:42,547 - INFO - Starting Data Visualization...
+2025-12-03 16:07:43,187 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:07:43,192 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:07:44,383 - ERROR - Error in Data Visualization: 'PLOT_DIR'
+2025-12-03 16:07:44,384 - INFO - Starting Data Analysis...
+2025-12-03 16:07:44,393 - ERROR - Error in Data Analysis: Cannot save file into a non-existent directory: 'Output\Output'
+2025-12-03 16:07:44,410 - INFO - ===Project Ended===
+
+2025-12-03 16:09:14,128 - INFO - ====Project Started====
+2025-12-03 16:09:14,129 - INFO - Starting Data Visualization...
+2025-12-03 16:09:14,771 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:09:14,776 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:09:16,094 - INFO - Data Visualization Completed.
+2025-12-03 16:09:16,094 - INFO - Starting Data Analysis...
+2025-12-03 16:09:16,413 - ERROR - Error in Data Analysis: 'dict' object has no attribute 'to_csv'
+2025-12-03 16:09:16,414 - INFO - ===Project Ended===
+
+2025-12-03 16:10:01,971 - INFO - ====Project Started====
+2025-12-03 16:10:01,972 - INFO - Starting Data Visualization...
+2025-12-03 16:10:02,597 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:10:02,602 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:10:03,879 - INFO - Data Visualization Completed.
+2025-12-03 16:10:03,880 - INFO - Starting Data Analysis...
+2025-12-03 16:10:04,275 - INFO - Data Analysis Completed.
+2025-12-03 16:10:04,275 - INFO - ===Project Ended===
+
+2025-12-03 16:23:29,837 - INFO - ====Project Started====
+2025-12-03 16:23:29,837 - INFO - Starting Data Visualization...
+2025-12-03 16:23:30,478 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:23:30,482 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:23:31,762 - INFO - Data Visualization Completed.
+2025-12-03 16:23:31,769 - INFO - Starting Data Analysis...
+2025-12-03 16:23:32,141 - INFO - Data Analysis Completed.
+2025-12-03 16:23:32,141 - INFO - ===Project Ended===
+
+2025-12-03 16:40:30,682 - INFO - ====Project Started====
+2025-12-03 16:40:30,682 - INFO - Starting Data Visualization...
+2025-12-03 16:40:31,334 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:40:31,340 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-03 16:40:32,669 - INFO - Data Visualization Completed.
+2025-12-03 16:40:32,669 - INFO - Starting Data Analysis...
+2025-12-03 16:40:33,058 - INFO - Data Analysis Completed.
+2025-12-03 16:40:33,058 - INFO - ===Project Ended===
+
